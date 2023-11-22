@@ -11,18 +11,25 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.black,
         appBar: AppBar(
-          title: Text('Instagram'),
+          title: const Text(
+            'DodoMap',
+            style: TextStyle(
+              fontSize: 30,
+              fontFamily: 'Proxima Nova',
+              fontWeight: FontWeight.bold,
+            ),
+          ),
           actions: [
             IconButton(
-              icon: Icon(Icons.add),
+              icon: const Icon(Icons.add),
               onPressed: () {},
             ),
             IconButton(
-              icon: Icon(Icons.favorite_border),
+              icon: const Icon(Icons.favorite_border),
               onPressed: () {},
             ),
             IconButton(
-              icon: Icon(Icons.send),
+              icon: const Icon(Icons.send),
               onPressed: () {},
             ),
           ],
@@ -37,7 +44,7 @@ class MyApp extends StatelessWidget {
                 color: Colors.black,
                 child: Column(
                   children: <Widget>[
-                    ListTile(
+                    const ListTile(
                       leading: CircleAvatar(
                         backgroundImage: NetworkImage(
                             'https://randomuser.me/api/portraits/men/68.jpg'),
@@ -62,24 +69,24 @@ class MyApp extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: <Widget>[
                         IconButton(
-                          icon: Icon(Icons.favorite_border),
+                          icon: const Icon(Icons.favorite_border),
                           onPressed: () {},
                           color: Colors.white,
                         ),
                         IconButton(
-                          icon: Icon(Icons.comment),
+                          icon: const Icon(Icons.comment),
                           onPressed: () {},
                           color: Colors.white,
                         ),
                         IconButton(
-                          icon: Icon(Icons.share),
+                          icon: const Icon(Icons.share),
                           onPressed: () {},
                           color: Colors.white,
                         ),
                       ],
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                    const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 12.0),
                       child: Text(
                         'Liked by Lorem, Ipsum, and 500 others',
                         style: TextStyle(
@@ -88,8 +95,8 @@ class MyApp extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                    const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 12.0),
                       child: Text(
                         'Lorem Ipsum Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
                         style: TextStyle(
