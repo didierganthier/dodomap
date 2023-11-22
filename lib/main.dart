@@ -40,20 +40,34 @@ class MyApp extends StatelessWidget {
                 color: Colors.black,
                 child: Column(
                   children: <Widget>[
-                    const ListTile(
-                      leading: CircleAvatar(
-                        backgroundImage: NetworkImage(
-                            'https://randomuser.me/api/portraits/men/68.jpg'),
+                    ListTile(
+                      leading: Container(
+                        height: 50,
+                        width: 50,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          border: Border.all(
+                            color: Colors.red,
+                            width: 2,
+                          ),
+                        ),
+                        child: const Padding(
+                          padding: EdgeInsets.all(2.0),
+                          child: CircleAvatar(
+                            backgroundImage: NetworkImage(
+                                'https://randomuser.me/api/portraits/men/69.jpg'),
+                          ),
+                        ),
                       ),
-                      title: Text(
-                        'Traveler007',
+                      title: const Text(
+                        'traveler007',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
                           fontFamily: 'Proxima Nova',
                         ),
                       ),
-                      subtitle: Text(
+                      subtitle: const Text(
                         'At Cayo Levantado',
                         style: TextStyle(
                           color: Colors.white,
@@ -72,8 +86,42 @@ class MyApp extends StatelessWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: <Widget>[
+                          Container(
+                            height: 50,
+                            width: 80,
+                            child: const Stack(
+                              children: <Widget>[
+                                Positioned(
+                                  top: 8.0,
+                                  child: CircleAvatar(
+                                    radius: 15.0,
+                                    backgroundImage: NetworkImage(
+                                        'https://randomuser.me/api/portraits/women/68.jpg'),
+                                  ),
+                                ),
+                                Positioned(
+                                  top: 8.0,
+                                  left: 20.0,
+                                  child: CircleAvatar(
+                                    radius: 15.0,
+                                    backgroundImage: NetworkImage(
+                                        'https://randomuser.me/api/portraits/women/69.jpg'),
+                                  ),
+                                ),
+                                Positioned(
+                                  top: 8.0,
+                                  left: 40.0,
+                                  child: CircleAvatar(
+                                    radius: 15.0,
+                                    backgroundImage: NetworkImage(
+                                        'https://randomuser.me/api/portraits/men/70.jpg'),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
                           const Text(
-                            'Liked by Lorem, Ipsum, and 500 others',
+                            'Liked by John, Jane, and 500 others',
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Colors.white,
