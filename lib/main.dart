@@ -11,28 +11,24 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.black,
         appBar: AppBar(
-          title: const Text(
-            'DodoMap',
-            style: TextStyle(
-              fontSize: 30,
-              fontFamily: 'Proxima Nova',
-              fontWeight: FontWeight.bold,
-            ),
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const Text(
+                'DodoMap',
+                style: TextStyle(
+                  fontSize: 30,
+                  fontFamily: 'Billabong',
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Image.asset(
+                'images/chat.png',
+                height: 25,
+                width: 25,
+              )
+            ],
           ),
-          actions: [
-            IconButton(
-              icon: const Icon(Icons.add),
-              onPressed: () {},
-            ),
-            IconButton(
-              icon: const Icon(Icons.favorite_border),
-              onPressed: () {},
-            ),
-            IconButton(
-              icon: const Icon(Icons.send),
-              onPressed: () {},
-            ),
-          ],
           backgroundColor: Colors.black,
         ),
         body: ListView.builder(
@@ -50,14 +46,20 @@ class MyApp extends StatelessWidget {
                             'https://randomuser.me/api/portraits/men/68.jpg'),
                       ),
                       title: Text(
-                        'Lorem Ipsum',
+                        'Traveler007',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
+                          fontFamily: 'Proxima Nova',
                         ),
                       ),
-                      subtitle: Text('Dolor sit amet',
-                          style: TextStyle(color: Colors.white)),
+                      subtitle: Text(
+                        'At Cayo Levantado',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontFamily: 'Proxima Nova',
+                        ),
+                      ),
                     ),
                     ClipRRect(
                       borderRadius: BorderRadius.circular(20),
@@ -65,43 +67,37 @@ class MyApp extends StatelessWidget {
                         'https://th.bing.com/th/id/OIP.Ih3ezvnzUBhGtn5x5CUcpAHaE6?rs=1&pid=ImgDetMain',
                       ),
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: <Widget>[
-                        IconButton(
-                          icon: const Icon(Icons.favorite_border),
-                          onPressed: () {},
-                          color: Colors.white,
-                        ),
-                        IconButton(
-                          icon: const Icon(Icons.comment),
-                          onPressed: () {},
-                          color: Colors.white,
-                        ),
-                        IconButton(
-                          icon: const Icon(Icons.share),
-                          onPressed: () {},
-                          color: Colors.white,
-                        ),
-                      ],
-                    ),
-                    const Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 12.0),
-                      child: Text(
-                        'Liked by Lorem, Ipsum, and 500 others',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                    const Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 12.0),
-                      child: Text(
-                        'Lorem Ipsum Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-                        style: TextStyle(
-                          color: Colors.white,
-                        ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 8.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: <Widget>[
+                          const Text(
+                            'Liked by Lorem, Ipsum, and 500 others',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                              fontFamily: 'Proxima Nova',
+                            ),
+                          ),
+                          Row(
+                            children: [
+                              Image.asset(
+                                'images/send.png',
+                                height: 25,
+                                width: 25,
+                              ),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              Image.asset(
+                                'images/bookmark.png',
+                                height: 25,
+                                width: 25,
+                              ),
+                            ],
+                          )
+                        ],
                       ),
                     ),
                   ],
