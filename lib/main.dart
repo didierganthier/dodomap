@@ -40,40 +40,50 @@ class MyApp extends StatelessWidget {
                 color: Colors.black,
                 child: Column(
                   children: <Widget>[
-                    ListTile(
-                      leading: Container(
-                        height: 50,
-                        width: 50,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          border: Border.all(
-                            color: Colors.red,
-                            width: 2,
+                    Row(
+                      children: <Widget>[
+                        Expanded(
+                          child: ListTile(
+                            leading: Container(
+                              height: 50,
+                              width: 50,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                border: Border.all(
+                                  color: Colors.red,
+                                  width: 2,
+                                ),
+                              ),
+                              child: const Padding(
+                                padding: EdgeInsets.all(2.0),
+                                child: CircleAvatar(
+                                  backgroundImage: NetworkImage(
+                                      'https://randomuser.me/api/portraits/men/69.jpg'),
+                                ),
+                              ),
+                            ),
+                            title: const Text(
+                              'traveler007',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                                fontFamily: 'Proxima Nova',
+                              ),
+                            ),
+                            subtitle: const Text(
+                              'At Cayo Levantado',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontFamily: 'Proxima Nova',
+                              ),
+                            ),
                           ),
                         ),
-                        child: const Padding(
-                          padding: EdgeInsets.all(2.0),
-                          child: CircleAvatar(
-                            backgroundImage: NetworkImage(
-                                'https://randomuser.me/api/portraits/men/69.jpg'),
-                          ),
-                        ),
-                      ),
-                      title: const Text(
-                        'traveler007',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
+                        const Icon(
+                          Icons.more_vert,
                           color: Colors.white,
-                          fontFamily: 'Proxima Nova',
                         ),
-                      ),
-                      subtitle: const Text(
-                        'At Cayo Levantado',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontFamily: 'Proxima Nova',
-                        ),
-                      ),
+                      ],
                     ),
                     ClipRRect(
                       borderRadius: BorderRadius.circular(20),
