@@ -321,6 +321,7 @@ class MyApp extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 30,
                   fontFamily: 'Billabong',
+                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
               ),
